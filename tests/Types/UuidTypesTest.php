@@ -51,7 +51,7 @@ class UuidTypesTest extends TestCase
      */
     public function testUuidTypeConversion(): void
     {
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = '0d1e908e-aa29-445b-8f20-c05370edfc41';
@@ -71,7 +71,7 @@ class UuidTypesTest extends TestCase
      */
     public function testUuidTypeConversion1(): void
     {
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = Uuid::fromString('0d1e908e-aa29-445b-8f20-c05370edfc41');
@@ -92,7 +92,7 @@ class UuidTypesTest extends TestCase
     public
     function testUuidTypeConversion2(): void
     {
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = Uuid::uuid4();
@@ -112,7 +112,7 @@ class UuidTypesTest extends TestCase
      */
     public function testUuidTypeToDatabaseConversion(): void
     {
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = '0d1e908e-aa29-445b-8f20-c05370edfc41';
@@ -132,7 +132,7 @@ class UuidTypesTest extends TestCase
      */
     public function testUuidTypeToDatabaseConversion1(): void
     {
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = Uuid::fromString('0d1e908e-aa29-445b-8f20-c05370edfc41');
@@ -152,7 +152,7 @@ class UuidTypesTest extends TestCase
      */
     public function testUuidTypeToDatabaseConversion2(): void
     {
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = Uuid::uuid4();
@@ -174,7 +174,7 @@ class UuidTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = 'd`9vX7n[k_>/-*^6';
@@ -191,7 +191,7 @@ class UuidTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = 11;
@@ -208,7 +208,7 @@ class UuidTypesTest extends TestCase
     {
         $this->expectException(\TypeError::class);
 
-        $type     = Type::getType(UuidType::NAME);
+        $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $uuid = new \stdClass();

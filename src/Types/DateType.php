@@ -22,6 +22,7 @@ declare(strict_types=1);
 namespace Whoa\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\ConversionException;
 use Whoa\Doctrine\Json\Date;
 use Whoa\Doctrine\Traits\DateTypeTrait;
 
@@ -33,11 +34,11 @@ class DateType extends \Doctrine\DBAL\Types\DateType
     use DateTypeTrait;
 
     /** @var string Type name */
-    const NAME = 'limoncelloDate';
+    public const NAME = 'whoaDate';
 
     /**
      * @inheritDoc
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
@@ -53,7 +54,7 @@ class DateType extends \Doctrine\DBAL\Types\DateType
 
     /**
      * @inheritDoc
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {

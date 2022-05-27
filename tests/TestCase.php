@@ -23,7 +23,6 @@ namespace Whoa\Tests\Doctrine;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Exception as DBALException;
-use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Exception;
 use Mockery;
 
@@ -48,7 +47,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
      * @throws Exception
      * @throws DBALException
      */
-    protected function createConnection()
+    protected function createConnection(): Connection
     {
         $connection = DriverManager::getConnection(['url' => 'sqlite:///', 'memory' => true]);
         $this->assertNotSame(false, $connection->executeStatement('PRAGMA foreign_keys = ON;'));

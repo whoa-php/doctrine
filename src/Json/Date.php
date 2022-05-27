@@ -21,22 +21,24 @@ declare(strict_types=1);
 
 namespace Whoa\Doctrine\Json;
 
+use DateTimeImmutable;
+use DateTimeInterface;
+use JsonSerializable;
+
 /**
  * @package Whoa\Doctrine
  */
-class Date extends \DateTimeImmutable implements \JsonSerializable
+class Date extends DateTimeImmutable implements JsonSerializable
 {
     /** @var string Date Format */
-    const JSON_API_FORMAT = 'Y-m-d';
+    public const JSON_API_FORMAT = 'Y-m-d';
 
-    public static function createFromDateTime(\DateTimeInterface $dateTime): self
+    public static function createFromDateTime(DateTimeInterface $dateTime): self
     {
         $utcTimestamp = $dateTime->getTimestamp();
 
         // yes, PHP DateTime can accept integer timestamp only as a string ¯\_( ͡° ͜ʖ ͡°)_/¯
-        $result = (new self("@$utcTimestamp"))->setTimezone($dateTime->getTimezone());
-
-        return $result;
+        return (new self("@$utcTimestamp"))->setTimezone($dateTime->getTimezone());
     }
 
     /**

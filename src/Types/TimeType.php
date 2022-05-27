@@ -22,6 +22,7 @@ declare(strict_types=1);
 namespace Whoa\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\ConversionException;
 use Whoa\Doctrine\Json\Time;
 use Whoa\Doctrine\Traits\TimeTypeTrait;
 
@@ -33,11 +34,11 @@ class TimeType extends \Doctrine\DBAL\Types\TimeType
     use TimeTypeTrait;
 
     /** @var string Type name */
-    const NAME = 'limoncelloTime';
+    public const NAME = 'whoaTime';
 
     /**
      * @inheritDoc
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
@@ -53,7 +54,7 @@ class TimeType extends \Doctrine\DBAL\Types\TimeType
 
     /**
      * @inheritDoc
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {

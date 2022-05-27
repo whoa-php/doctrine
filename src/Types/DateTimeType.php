@@ -23,6 +23,7 @@ namespace Whoa\Doctrine\Types;
 
 use DateTimeInterface;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\ConversionException;
 use Whoa\Doctrine\Json\DateTime;
 use Whoa\Doctrine\Traits\DateTimeTypeTrait;
 
@@ -34,11 +35,11 @@ class DateTimeType extends \Doctrine\DBAL\Types\DateTimeType
     use DateTimeTypeTrait;
 
     /** @var string Type name */
-    const NAME = 'limoncelloDateTime';
+    public const NAME = 'whoaDateTime';
 
     /**
      * @inheritDoc
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
@@ -55,7 +56,7 @@ class DateTimeType extends \Doctrine\DBAL\Types\DateTimeType
 
     /**
      * @inheritDoc
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {

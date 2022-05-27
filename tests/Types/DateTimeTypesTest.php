@@ -60,7 +60,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTimeTypeConversion(): void
     {
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = '2001-02-03T04:05:06+0000';
@@ -83,7 +83,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTimeTypeConversion1(): void
     {
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = new DateTime('2001-02-03T04:05:06+0000');
@@ -106,7 +106,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTimeTypeConversion2(): void
     {
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = new WhoaDateTime('2001-02-03T04:05:06+0000');
@@ -129,7 +129,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTimeTypeToDatabaseConversion1(): void
     {
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = '2001-02-03T04:05:06+0000';
@@ -152,7 +152,7 @@ class DateTimeTypesTest extends TestCase
     public function testDateTimeTypeToDatabaseConversion2(): void
     {
         /** @var DateTimeType $type */
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = new DateTime('2001-02-03 04:05:06');
@@ -172,7 +172,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTimeTypeToDatabaseConversion3(): void
     {
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = new WhoaDateTime('2001-02-03 04:05:06');
@@ -197,7 +197,7 @@ class DateTimeTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = 'XXX';
@@ -215,7 +215,7 @@ class DateTimeTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(DateTimeType::NAME);
+        $type = Type::getType(DateTimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $dateTime = new \stdClass();
@@ -231,7 +231,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTypeConversion(): void
     {
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = '2001-02-03';
@@ -255,7 +255,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTypeConversion1(): void
     {
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new DateTime('2001-02-03');
@@ -278,7 +278,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testDateTypeConversion2(): void
     {
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new WhoaDate('2001-02-03');
@@ -302,7 +302,7 @@ class DateTimeTypesTest extends TestCase
     public function testDateTypeToDatabaseConversion1(): void
     {
         /** @var DateType $type */
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = '2001-02-03';
@@ -325,7 +325,7 @@ class DateTimeTypesTest extends TestCase
     public function testDateTypeToDatabaseConversion2(): void
     {
         /** @var DateType $type */
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new DateTime('2001-02-03');
@@ -348,7 +348,7 @@ class DateTimeTypesTest extends TestCase
     public function testDateTypeToDatabaseConversion3(): void
     {
         /** @var DateType $type */
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new WhoaDate('2001-02-03');
@@ -372,7 +372,7 @@ class DateTimeTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = 'XXX';
@@ -390,7 +390,7 @@ class DateTimeTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(DateType::NAME);
+        $type = Type::getType(DateType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new \stdClass();
@@ -406,7 +406,7 @@ class DateTimeTypesTest extends TestCase
      */
     public function testTimeTypeConversion(): void
     {
-        $type     = Type::getType(TimeType::NAME);
+        $type = Type::getType(TimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $time = '22:10:01';
@@ -431,7 +431,7 @@ class DateTimeTypesTest extends TestCase
     public function testTimeTypeToDatabaseConversion1(): void
     {
         /** @var TimeType $type */
-        $type     = Type::getType(TimeType::NAME);
+        $type = Type::getType(TimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $time = '22:10:01';
@@ -454,7 +454,7 @@ class DateTimeTypesTest extends TestCase
     public function testTimeTypeToDatabaseConversion2(): void
     {
         /** @var DateType $type */
-        $type     = Type::getType(TimeType::NAME);
+        $type = Type::getType(TimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new DateTime('22:10:01');
@@ -477,7 +477,7 @@ class DateTimeTypesTest extends TestCase
     public function testTimeTypeToDatabaseConversion3(): void
     {
         /** @var TimeType $type */
-        $type     = Type::getType(TimeType::NAME);
+        $type = Type::getType(TimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new WhoaTime('22:10:01');
@@ -501,7 +501,7 @@ class DateTimeTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(TimeType::NAME);
+        $type = Type::getType(TimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = 'XXX';
@@ -519,7 +519,7 @@ class DateTimeTypesTest extends TestCase
     {
         $this->expectException(\Doctrine\DBAL\Types\ConversionException::class);
 
-        $type     = Type::getType(TimeType::NAME);
+        $type = Type::getType(TimeType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
 
         $date = new \stdClass();
@@ -536,7 +536,7 @@ class DateTimeTypesTest extends TestCase
         $currentTimeZone = date_default_timezone_get();
         date_default_timezone_set('Antarctica/Casey');
 
-        $dateTime     = new DateTime('2001-02-03 04:05:06');
+        $dateTime = new DateTime('2001-02-03 04:05:06');
         $jsonDateTime = WhoaDateTime::createFromDateTime($dateTime);
 
         $this->assertEquals('"2001-02-03T04:05:06+0800"', json_encode($jsonDateTime));

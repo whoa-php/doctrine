@@ -42,8 +42,7 @@ trait DateTimeTypeTrait
         $value,
         string $nonJsonFormat,
         string $typeName
-    ): ?DateTimeInterface
-    {
+    ): ?DateTimeInterface {
         if ($value instanceof DateTimeInterface || $value === null) {
             $result = $value;
         } elseif (is_string($value) === true) {

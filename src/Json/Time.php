@@ -20,27 +20,29 @@ declare(strict_types=1);
 
 namespace Whoa\Doctrine\Json;
 
+use DateTimeImmutable;
+use DateTimeInterface;
+use JsonSerializable;
+
 /**
  * @package Whoa\Doctrine
  */
-class Time extends \DateTimeImmutable implements \JsonSerializable
+class Time extends DateTimeImmutable implements JsonSerializable
 {
     /** @var string Time Format */
-    const JSON_API_FORMAT = 'H:i:s';
+    public const JSON_API_FORMAT = 'H:i:s';
 
     /**
-     * @param \DateTimeInterface $dateTime
+     * @param DateTimeInterface $dateTime
      *
      * @return static
      */
-    public static function createFromDateTime(\DateTimeInterface $dateTime): self
+    public static function createFromDateTime(DateTimeInterface $dateTime): self
     {
         $utcTimestamp = $dateTime->getTimestamp();
 
         // yes, PHP DateTime can accept integer timestamp only as a string ¯\_( ͡° ͜ʖ ͡°)_/¯
-        $result = (new self("@$utcTimestamp"))->setTimezone($dateTime->getTimezone());
-
-        return $result;
+        return (new self("@$utcTimestamp"))->setTimezone($dateTime->getTimezone());
     }
 
     /**
