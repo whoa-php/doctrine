@@ -26,5 +26,5 @@ namespace Whoa\Doctrine\Types;
 class UuidType extends \Ramsey\Uuid\Doctrine\UuidType
 {
     /** @var string Type name */
-    public const NAME = 'limoncelloUuid';
+    public const NAME = 'whoaUuid';
 }
