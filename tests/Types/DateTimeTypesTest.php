@@ -40,7 +40,6 @@ class DateTimeTypesTest extends TestCase
 {
     /**
      * @inheritdoc
-     *
      * @throws DBALException
      */
     protected function setUp(): void
@@ -54,7 +53,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -77,7 +75,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -100,7 +97,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -123,7 +119,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -145,7 +140,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -166,7 +160,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -189,7 +182,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type to database conversion invalid input.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -207,7 +199,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date time type to database conversion invalid input.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -225,7 +216,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -249,7 +239,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -272,7 +261,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -295,7 +283,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -318,7 +305,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -341,7 +327,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -364,7 +349,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type to database conversion invalid type.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -382,7 +366,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test date type to database conversion invalid type.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -400,7 +383,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test time type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -424,7 +406,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test time type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -447,7 +428,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test time type to database conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -470,7 +450,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test time type conversion.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -493,7 +472,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test time type to database conversion invalid type.
-     *
      * @throws Exception
      * @throws DBALException
      */
@@ -511,7 +489,6 @@ class DateTimeTypesTest extends TestCase
 
     /**
      * Test time type to database conversion invalid type.
-     *
      * @throws Exception
      * @throws DBALException
      */

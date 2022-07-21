@@ -34,7 +34,6 @@ trait DateTimeTypeTrait
      * @param        $value
      * @param string $nonJsonFormat
      * @param string $typeName
-     *
      * @return DateTimeInterface|null
      * @throws ConversionException
      */

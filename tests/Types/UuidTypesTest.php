@@ -34,7 +34,6 @@ class UuidTypesTest extends TestCase
 {
     /**
      * @inheritDoc
-     *
      * @throws DBALException
      */
     protected function setUp(): void
@@ -46,7 +45,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type conversion.
-     *
      * @throws DBALException
      */
     public function testUuidTypeConversion(): void
@@ -66,7 +64,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type conversions.
-     *
      * @throws DBALException
      */
     public function testUuidTypeConversion1(): void
@@ -86,11 +83,9 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type conversions.
-     *
      * @throws DBALException
      */
-    public
-    function testUuidTypeConversion2(): void
+    public function testUuidTypeConversion2(): void
     {
         $type = Type::getType(UuidType::NAME);
         $platform = $this->createConnection()->getDatabasePlatform();
@@ -107,7 +102,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type to database conversion.
-     *
      * @throws DBALException
      */
     public function testUuidTypeToDatabaseConversion(): void
@@ -127,7 +121,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type to database conversion.
-     *
      * @throws DBALException
      */
     public function testUuidTypeToDatabaseConversion1(): void
@@ -147,7 +140,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type to database conversion.
-     *
      * @throws DBALException
      */
     public function testUuidTypeToDatabaseConversion2(): void
@@ -167,7 +159,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type conversion invalid input.
-     *
      * @throws DBALException
      */
     public function testUuidTypeConversionInvalidInput(): void
@@ -184,7 +175,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type conversion invalid input.
-     *
      * @throws DBALException.
      */
     public function testUuidTypeConversionInvalidInput1(): void
@@ -201,7 +191,6 @@ class UuidTypesTest extends TestCase
 
     /**
      * Test UUID type conversion invalid input.
-     *
      * @throws DBALException.
      */
     public function testUuidTypeConversionInvalidInput2(): void

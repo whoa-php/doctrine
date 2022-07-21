@@ -35,7 +35,6 @@ class DateTime extends DateTimeImmutable implements JsonSerializable
 
     /**
      * @param DateTimeInterface $dateTime
-     *
      * @return static
      */
     public static function createFromDateTime(DateTimeInterface $dateTime): self

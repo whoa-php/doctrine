@@ -43,7 +43,6 @@ class TestCase extends \PHPUnit\Framework\TestCase
 
     /**
      * @return Connection
-     *
      * @throws Exception
      * @throws DBALException
      */

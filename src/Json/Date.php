@@ -33,6 +33,10 @@ class Date extends DateTimeImmutable implements JsonSerializable
     /** @var string Date Format */
     public const JSON_API_FORMAT = 'Y-m-d';
 
+    /**
+     * @param DateTimeInterface $dateTime
+     * @return static
+     */
     public static function createFromDateTime(DateTimeInterface $dateTime): self
     {
         $utcTimestamp = $dateTime->getTimestamp();

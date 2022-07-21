@@ -30,7 +30,6 @@ trait UuidTypeTrait
 {
     /**
      * @param null $value
-     *
      * @return UuidInterface
      */
     public function uuid($value = null): UuidInterface
@@ -48,7 +47,6 @@ trait UuidTypeTrait
 
     /**
      * @param string $value
-     *
      * @return UuidInterface
      */
     private function parseUuid(string $value): UuidInterface
